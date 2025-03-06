@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Afilliate{
+- String Name
+- String LastName
+- Date Birthday
+- int affNum
+- int InitialNum
+- int LastNum
+
+-int getAndIncrement()
++Affiliate()
+}
+
+@enduml

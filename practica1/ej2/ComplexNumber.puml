@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ComplexNumber{
+-int realPart
+-int ImaginaryPart
++ComplexNumber(int real, int imag)
++ComplexNumber(int real)
++getReal()
++getImaginary()
++ComplexNumber plus(ComplexNumber a, ComplexNumber b)
+}
+
+@enduml
