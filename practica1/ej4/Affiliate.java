@@ -2,8 +2,8 @@ package practica1.ej4;
 
 //No esta bien hecho
 public class Affiliate {
-    private int name;
-    private int lastName;
+    private name;
+    private String lastName;
     private int birthday;
     private int initialNum = 1000;
     private int lastNum;

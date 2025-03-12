@@ -1,19 +1,31 @@
 package taller1;
 
 public class MultipleCounter extends Counter{
-    private int counter;
-    private int parameter;
+    private int times;
     public MultipleCounter(int n){
-        counter = 0;
-        parameter = n;
+        super();
+        this.times = n;
     }
+    @Override
+
     public void increment(){
-        counter += parameter;
+        int aux = times;
+        while(aux > 0){
+            super.increment();
+            aux--;
+        }
     }
-    public void decrement(int n){
-        counter -= parameter;
+
+    @Override
+    public void decrement(){
+        int aux = times;
+        while(aux > 0){
+            super.decrement();
+            aux--;
+        }
     }
+
     public int getCount(){
-        return counter;
+        return super.getCount();
     }
 }
