@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Rectangle --|> Figures
+Triangle --|> Figures
+Elipse --|> Figures
+Circle --|> Elipse
+
+
+
+abstract class Figures{
++double GetArea()
++double GetPerimeter()
+}
+
+class Rectangle{
+-Point topLeft
+-Point bottomRight
++Rectangle(Point topLeft, Point bottomRight)
++double GetArea()
++double GetPerimeter()
++double getHeight()
++double getWidth()
+}
+
+class Triangle{
+-Point p1
+-Point p2
+-Point p3
++Triangle(Point p1, Point p2, Point p3)
++double GetArea()
++double GetPerimeter()
++double getHeight()
++double getWidth()
+}
+
+class Elipse{
+    -Point centerPoint
+    -double mayorAxis
+    -double minorAxis
+    +Elipse(...)
+    +double GetArea()
+    +double GetPerimeter()
+}
+
+class Circle{
+    +Circle(...)
+}
+
+@enduml
