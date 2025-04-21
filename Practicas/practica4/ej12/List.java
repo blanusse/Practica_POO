@@ -3,6 +3,7 @@ package Practicas.practica4.ej12;
 public class List implements LinearList {
     private Node first;
 
+
     @Override
     public void add(Object obj) {
         Node current = first;

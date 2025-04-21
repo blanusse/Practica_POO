@@ -13,6 +13,7 @@ public class ej1 {
             System.out.println("Son distintos");
         }
     }
+
 }
 
 // la salida es son distintos porque se usa el == en vez del .equals y el == compara los hash code de cada uno
