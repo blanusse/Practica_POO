@@ -1,17 +1,28 @@
-//package leetCode;
-//
-//import java.lang.reflect.Array;
-//import java.util.ArrayList;
-//import java.util.Arrays;
-//import java.util.Comparator;
-//import java.util.List;
-//
-//class Solution {
-//    public boolean isValidSudoku(char[][] board) {
-//        char[][] copyOf = board.clone();
-//        for(int i = 0; i<copyOf.length; i++){
-//
-//        }
-//    }
-//}
-//
+package leetCode;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        Map<Character, Character> map = new HashMap<>();
+        map.put('(', ')');
+        map.put('{', '}');
+        map.put('[', ']');
+
+        for(char c : s.toCharArray()){
+            if (map.containsKey(c)) {
+                if (!stack.isEmpty() && stack.peek() == map.get(c)) {
+                    stack.pop();
+                } else {
+                    return false;
+                }
+            } else {
+                stack.push(c);
+            }
+        }
+        return stack.isEmpty();
+    }
+}
