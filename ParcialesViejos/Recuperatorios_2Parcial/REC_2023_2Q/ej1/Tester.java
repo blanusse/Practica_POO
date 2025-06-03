@@ -33,6 +33,7 @@ public class Tester {
 // DOWNLOAD Event on file mineSweeper.c of user franco on 2023-11-26
 // COMMENT Event on file r1.doc of user marce on 2023-11-27
 // SUGGESTION Event on file r1.doc of user franco on 2023-11-27
+        System.out.println("-----");
 
 
 // Obtiene el evento más antiguo del área de trabajo "PI". En caso de haber más de un evento
@@ -43,6 +44,7 @@ public class Tester {
 // con la misma fecha de edición, utiliza el mismo criterio de desemapte de events
         System.out.println(drive.mostRecentEvent("PI"));
 // SUGGESTION Event on file r1.doc of user franco on 2023-11-27
+        System.out.println("-----");
 
 
         for(Event event : drive.events("POO")) {
@@ -53,7 +55,7 @@ public class Tester {
 // COMMENT Event on file r2.doc of user marce on 2023-11-28
 // DOWNLOAD Event on file r2.doc of user marce on 2023-11-28
 
-
+        System.out.println("-----");
         System.out.println(drive.earliestEvent("POO"));
 // COMMENT Event on file r2.doc of user franco on 2023-11-27
         System.out.println(drive.mostRecentEvent("POO"));
@@ -71,6 +73,8 @@ public class Tester {
         } catch (Exception ex) {
             System.out.println(ex.getMessage()); // File already exists.
         }
+        System.out.println("-----");
+
 
 
 // No existe el área de trabajo de nombre "EDA"
@@ -84,7 +88,10 @@ public class Tester {
         } catch (Exception ex) {
             System.out.println(ex.getClass()); // class java.util.NoSuchElementException
         }
+        System.out.println("-----");
+
         System.out.println(drive.events("EDA").isEmpty()); // true
+        System.out.println("-----");
 
 
     }

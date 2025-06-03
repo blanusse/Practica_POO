@@ -32,8 +32,7 @@ public class GDrive {
     }
 
     public Collection<Event> events(String area){
-        checkArea(area);
-        return eventByArea.get(area);
+        return eventByArea.getOrDefault(area, new TreeSet<>());
     }
 
     public Event earliestEvent(String area){
@@ -42,6 +41,9 @@ public class GDrive {
     }
 
     public Event mostRecentEvent(String area){
+        checkArea(area);
+        return eventByArea.get(area).getLast();
+
 
     }
 }
