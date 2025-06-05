@@ -40,7 +40,7 @@ public class PasswordManagerTester {
 
 
        // Agrega una bóveda "Work" con la política de contraseñas Level1.
-       passwordManager.addVault("Work", ....................);
+       passwordManager.addVault("Work", Types.LEVEL1);
 
 
        try {
@@ -57,7 +57,7 @@ public class PasswordManagerTester {
 
        // Actualiza la política de contraseñas de la bóveda "Work" a Level2
        // Si la bóveda no existe se arroja un error
-       passwordManager.changeVaultPolicy("Work", ....................);
+       passwordManager.changeVaultPolicy("Work", Types.LEVEL2);
 
 
        // Obtiene todos los sitios web de la bóveda "Work" que tengan contraseñas
@@ -71,7 +71,7 @@ public class PasswordManagerTester {
        // github.com
 
 
-       passwordManager.changeVaultPolicy("Personal", ....................);
+       passwordManager.changeVaultPolicy("Personal", Types.LEVEL1);
 
 
        // Obtiene todos los sitios web que tengan contraseñas que no cumplan

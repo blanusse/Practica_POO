@@ -10,5 +10,9 @@ public enum Types {
     }
 
 
+    public boolean isValidPassword(String password){
+        return password.length() > this.minCharacters;
+    }
+
 
 }
